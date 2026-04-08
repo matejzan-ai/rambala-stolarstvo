@@ -758,4 +758,27 @@
         }
     }, { passive: true });
 
+    /* ---- Flip Cards ---- */
+    document.querySelectorAll('.service-flip').forEach(function (card) {
+        var inner = card.querySelector('.service-flip-inner');
+        var flipTimer = null;
+
+        card.addEventListener('click', function () {
+            clearTimeout(flipTimer);
+            inner.classList.toggle('flipped');
+        });
+
+        card.addEventListener('mouseleave', function () {
+            if (inner.classList.contains('flipped')) {
+                flipTimer = setTimeout(function () {
+                    inner.classList.remove('flipped');
+                }, 3000);
+            }
+        });
+
+        card.addEventListener('mouseenter', function () {
+            clearTimeout(flipTimer);
+        });
+    });
+
 })();
