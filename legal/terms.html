@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obchodn&eacute; podmienky | Rambala Stol&aacute;rstvo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --color-primary: #2C1810; --color-secondary: #D4A574; --color-bg: #FAF7F2; --color-text: #1A1A1A; --color-muted: #6B6560; --color-border: #E5DDD5; }
+        body { font-family: 'Inter', sans-serif; background: var(--color-bg); color: var(--color-text); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--color-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+        .back-link:hover { color: var(--color-secondary); }
+        .lang-tabs { display: flex; gap: 0.25rem; margin-bottom: 2rem; background: #F0EBE3; border-radius: 8px; padding: 3px; width: fit-content; }
+        .lang-tab { padding: 0.4rem 0.8rem; border: none; background: none; font-size: 0.8rem; font-weight: 600; cursor: pointer; border-radius: 6px; color: var(--color-muted); transition: all 0.2s; }
+        .lang-tab.active { background: var(--color-secondary); color: #fff; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+        .subtitle { color: var(--color-muted); margin-bottom: 2rem; font-size: 0.9rem; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--color-primary); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; }
+        p, li { font-size: 0.95rem; margin-bottom: 0.75rem; }
+        ul { padding-left: 1.5rem; }
+        li { margin-bottom: 0.4rem; }
+        a { color: var(--color-secondary); }
+        .updated { font-size: 0.8rem; color: var(--color-muted); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="../index.html" class="back-link">&larr; Sp&auml;&tcaron; na hlavn&uacute; str&aacute;nku</a>
+    <div class="lang-tabs">
+        <button class="lang-tab active" onclick="showLang('sk')">SK</button>
+        <button class="lang-tab" onclick="showLang('en')">EN</button>
+        <button class="lang-tab" onclick="showLang('de')">DE</button>
+        <button class="lang-tab" onclick="showLang('pl')">PL</button>
+    </div>
+
+    <div class="lang-content active" id="lang-sk">
+        <h1>Obchodn&eacute; podmienky</h1>
+        <p class="subtitle">Podmienky poskytovania slu&zcaron;ieb spolo&ccaron;nosti Rambala Stol&aacute;rstvo.</p>
+        <h2>1. Rozsah</h2>
+        <p>Tieto podmienky sa vz&tcaron;ahuj&uacute; na v&scaron;etky slu&zcaron;by a produkty poskytovan&eacute; spolo&ccaron;nos&tcaron;ou Rambala Stol&aacute;rstvo, Zubrohlava, 029 43.</p>
+        <h2>2. Cenov&eacute; ponuky a objedn&aacute;vky</h2>
+        <p>V&scaron;etky cenov&eacute; ponuky s&uacute; nez&aacute;v&auml;zn&eacute; a platn&eacute; 30 dn&iacute;. Zmluva vznik&aacute; p&iacute;somn&yacute;m potvrden&iacute;m objedn&aacute;vky oboma stranami. Ceny s&uacute; uv&aacute;dzan&eacute; vr&aacute;tane DPH.</p>
+        <h2>3. Dodacie podmienky</h2>
+        <p>Dodacie lehoty s&uacute; dohodnut&eacute; individu&aacute;lne. V pr&iacute;pade ome&scaron;kania v&aacute;s budeme informova&tcaron;. Vy&scaron;&scaron;ia moc ospravedl&ncaron;uje ome&scaron;kanie.</p>
+        <h2>4. Platobn&eacute; podmienky</h2>
+        <p>Z&aacute;loha 50 % pri potvrden&iacute; objedn&aacute;vky, zvy&scaron;ok pri odovzdan&iacute;. Splatnos&tcaron; fakt&uacute;r je 14 dn&iacute;.</p>
+        <h2>5. Z&aacute;ruka a reklam&aacute;cie</h2>
+        <p>Na v&scaron;etky v&yacute;robky poskytujeme z&aacute;ruku 24 mesiacov. Reklam&aacute;cie rie&scaron;ime do 30 dn&iacute;. Z&aacute;ruka sa nevz&tcaron;ahuje na po&scaron;kodenie sp&ocirc;soben&eacute; nespr&aacute;vnym pou&zcaron;&iacute;van&iacute;m.</p>
+        <h2>6. Zodpovednos&tcaron;</h2>
+        <p>Zodpovedáme za &scaron;kody sp&ocirc;soben&eacute; &uacute;myseln&yacute;m konan&iacute;m alebo hrubou nedbanlivosťou. Zodpovednos&tcaron; je obmedzen&aacute; na hodnotu z&aacute;kazky.</p>
+        <h2>7. Pr&aacute;va spotrebite&lcaron;a</h2>
+        <p>Spotrebitelia maj&uacute; pr&aacute;vo na odst&uacute;penie od zmluvy v s&uacute;lade so z&aacute;konom &ccaron;. 102/2014 Z.z. a smernicou E&Uacute; 2011/83/E&Uacute;. V&yacute;robky na mieru s&uacute; z odst&uacute;penia vyl&uacute;&ccaron;en&eacute;.</p>
+        <h2>8. Rozhodn&eacute; pr&aacute;vo</h2>
+        <p>Tieto podmienky sa riadia slovensk&yacute;m pr&aacute;vom. Pr&iacute;slu&scaron;n&yacute;m s&uacute;dom je s&uacute;d v Slovenskej republike. Spotrebitelia m&ocirc;&zcaron;u vyu&zcaron;i&tcaron; alternat&iacute;vne rie&scaron;enie sporov cez platformu ODR (ec.europa.eu/odr).</p>
+        <p class="updated">Posledn&aacute; aktualiz&aacute;cia: 1. janu&aacute;r 2026</p>
+    </div>
+
+    <div class="lang-content" id="lang-en">
+        <h1>Terms &amp; Conditions</h1>
+        <p class="subtitle">Terms of service for Rambala Stol&aacute;rstvo.</p>
+        <h2>1. Scope</h2>
+        <p>These terms apply to all services and products provided by Rambala Stol&aacute;rstvo, Zubrohlava, 029 43, Slovakia.</p>
+        <h2>2. Quotes &amp; Orders</h2>
+        <p>All quotes are non-binding and valid for 30 days. A contract is established upon written confirmation by both parties. Prices include VAT.</p>
+        <h2>3. Delivery</h2>
+        <p>Delivery timelines are agreed individually. We will inform you of any delays. Force majeure excuses delays.</p>
+        <h2>4. Payment</h2>
+        <p>50% deposit upon order confirmation, remainder upon delivery. Invoice payment term is 14 days.</p>
+        <h2>5. Warranty</h2>
+        <p>All products carry a 24-month warranty. Claims are resolved within 30 days. Warranty does not cover damage caused by improper use.</p>
+        <h2>6. Liability</h2>
+        <p>We are liable for damages caused by intent or gross negligence. Liability is limited to the order value.</p>
+        <h2>7. Consumer Rights</h2>
+        <p>Consumers have withdrawal rights under EU Directive 2011/83/EU. Custom-made products are excluded from withdrawal. EU consumers may use the ODR platform (ec.europa.eu/odr).</p>
+        <h2>8. Governing Law</h2>
+        <p>These terms are governed by Slovak law. Disputes are subject to Slovak courts.</p>
+        <p class="updated">Last updated: January 1, 2026</p>
+    </div>
+
+    <div class="lang-content" id="lang-de">
+        <h1>Allgemeine Gesch&auml;ftsbedingungen</h1>
+        <p class="subtitle">Gesch&auml;ftsbedingungen von Rambala Stol&aacute;rstvo.</p>
+        <h2>1. Geltungsbereich</h2>
+        <p>Diese AGB gelten f&uuml;r alle Leistungen und Produkte von Rambala Stol&aacute;rstvo, Zubrohlava, 029 43, Slowakei.</p>
+        <h2>2. Angebote &amp; Bestellungen</h2>
+        <p>Alle Angebote sind unverbindlich und 30 Tage g&uuml;ltig. Ein Vertrag kommt durch schriftliche Best&auml;tigung zustande. Preise verstehen sich inkl. MwSt.</p>
+        <h2>3. Lieferung</h2>
+        <p>Lieferfristen werden individuell vereinbart. Bei Verz&ouml;gerungen informieren wir Sie. H&ouml;here Gewalt entschuldigt Verz&ouml;gerungen.</p>
+        <h2>4. Zahlung</h2>
+        <p>50% Anzahlung bei Auftragsbest&auml;tigung, Rest bei Lieferung. Zahlungsziel: 14 Tage.</p>
+        <h2>5. Gew&auml;hrleistung</h2>
+        <p>Alle Produkte haben 24 Monate Gew&auml;hrleistung. Reklamationen werden innerhalb von 30 Tagen bearbeitet. Sch&auml;den durch unsachgem&auml;&szlig;en Gebrauch sind ausgeschlossen.</p>
+        <h2>6. Haftung</h2>
+        <p>Wir haften f&uuml;r Sch&auml;den durch Vorsatz oder grobe Fahrl&auml;ssigkeit. Die Haftung ist auf den Auftragswert begrenzt.</p>
+        <h2>7. Verbraucherrechte</h2>
+        <p>Verbraucher haben Widerrufsrechte gem&auml;&szlig; EU-Richtlinie 2011/83/EU. Ma&szlig;anfertigungen sind vom Widerruf ausgeschlossen. EU-Verbraucher k&ouml;nnen die ODR-Plattform nutzen (ec.europa.eu/odr).</p>
+        <h2>8. Anwendbares Recht</h2>
+        <p>Es gilt slowakisches Recht. Gerichtsstand ist die Slowakische Republik.</p>
+        <p class="updated">Letzte Aktualisierung: 1. Januar 2026</p>
+    </div>
+
+    <div class="lang-content" id="lang-pl">
+        <h1>Regulamin</h1>
+        <p class="subtitle">Warunki &sacute;wiadczenia us&lstrok;ug Rambala Stol&aacute;rstvo.</p>
+        <h2>1. Zakres</h2>
+        <p>Niniejszy regulamin dotyczy wszystkich us&lstrok;ug i produkt&oacute;w Rambala Stol&aacute;rstvo, Zubrohlava, 029 43, S&lstrok;owacja.</p>
+        <h2>2. Oferty i zam&oacute;wienia</h2>
+        <p>Wszystkie oferty s&aogon; niezobowi&aogon;zuj&aogon;ce i wa&zcaron;ne przez 30 dni. Umowa powstaje po pisemnym potwierdzeniu. Ceny zawieraj&aogon; VAT.</p>
+        <h2>3. Dostawa</h2>
+        <p>Terminy dostaw ustalane s&aogon; indywidualnie. O op&oacute;&zacute;nieniach informujemy niezw&lstrok;ocznie. Si&lstrok;a wy&zcaron;sza usprawiedliwia op&oacute;&zacute;nienia.</p>
+        <h2>4. P&lstrok;atno&sacute;ci</h2>
+        <p>50% zaliczki przy potwierdzeniu, reszta przy dostawie. Termin p&lstrok;atno&sacute;ci faktur: 14 dni.</p>
+        <h2>5. Gwarancja</h2>
+        <p>Wszystkie produkty obj&eogon;te s&aogon; 24-miesi&eogon;czn&aogon; gwarancj&aogon;. Reklamacje rozpatrujemy w ci&aogon;gu 30 dni. Gwarancja nie obejmuje uszkodze&nacute; wynikaj&aogon;cych z nieprawid&lstrok;owego u&zcaron;ytkowania.</p>
+        <h2>6. Odpowiedzialno&sacute;&cacute;</h2>
+        <p>Ponosimy odpowiedzialno&sacute;&cacute; za szkody wyrz&aogon;dzone umy&sacute;lnie lub przez ra&zcaron;&aogon;ce niedbalstwo. Odpowiedzialno&sacute;&cacute; ograniczona jest do warto&sacute;ci zam&oacute;wienia.</p>
+        <h2>7. Prawa konsumenta</h2>
+        <p>Konsumenci maj&aogon; prawo odst&aogon;pienia od umowy zgodnie z dyrektyw&aogon; UE 2011/83/UE. Produkty na wymiar s&aogon; wy&lstrok;&aogon;czone. Platforma ODR: ec.europa.eu/odr.</p>
+        <h2>8. Prawo w&lstrok;a&sacute;ciwe</h2>
+        <p>Obowi&aogon;zuje prawo s&lstrok;owackie. S&aogon;dem w&lstrok;a&sacute;ciwym jest s&aogon;d w Republice S&lstrok;owackiej.</p>
+        <p class="updated">Ostatnia aktualizacja: 1 stycznia 2026</p>
+    </div>
+</div>
+<script>
+function showLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelector('.lang-tab[onclick*="' + lang + '"]').classList.add('active');
+}
+</script>
+</body>
+</html>

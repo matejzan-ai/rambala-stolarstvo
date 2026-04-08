@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ochrana s&uacute;kromia | Rambala Stol&aacute;rstvo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --color-primary: #2C1810; --color-secondary: #D4A574; --color-bg: #FAF7F2;
+            --color-text: #1A1A1A; --color-muted: #6B6560; --color-border: #E5DDD5;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--color-bg); color: var(--color-text); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--color-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+        .back-link:hover { color: var(--color-secondary); }
+        .lang-tabs { display: flex; gap: 0.25rem; margin-bottom: 2rem; background: #F0EBE3; border-radius: 8px; padding: 3px; width: fit-content; }
+        .lang-tab { padding: 0.4rem 0.8rem; border: none; background: none; font-size: 0.8rem; font-weight: 600; cursor: pointer; border-radius: 6px; color: var(--color-muted); transition: all 0.2s; }
+        .lang-tab.active { background: var(--color-secondary); color: #fff; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+        .subtitle { color: var(--color-muted); margin-bottom: 2rem; font-size: 0.9rem; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--color-primary); margin: 2rem 0 0.75rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; }
+        h3 { font-size: 1rem; font-weight: 600; margin: 1.25rem 0 0.5rem; }
+        p, li { font-size: 0.95rem; color: var(--color-text); margin-bottom: 0.75rem; }
+        ul { padding-left: 1.5rem; }
+        li { margin-bottom: 0.4rem; }
+        a { color: var(--color-secondary); }
+        .updated { font-size: 0.8rem; color: var(--color-muted); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="../index.html" class="back-link">&larr; Sp&auml;&tcaron; na hlavn&uacute; str&aacute;nku</a>
+    <div class="lang-tabs">
+        <button class="lang-tab active" onclick="showLang('sk')">SK</button>
+        <button class="lang-tab" onclick="showLang('en')">EN</button>
+        <button class="lang-tab" onclick="showLang('de')">DE</button>
+        <button class="lang-tab" onclick="showLang('pl')">PL</button>
+    </div>
+
+    <!-- SLOVAK -->
+    <div class="lang-content active" id="lang-sk">
+        <h1>Ochrana s&uacute;kromia</h1>
+        <p class="subtitle">Z&aacute;sady ochrany osobn&yacute;ch &uacute;dajov pod&lcaron;a GDPR (EU 2016/679) a z&aacute;kona &ccaron;. 18/2018 Z.z.</p>
+
+        <h2>1. Prev&aacute;dzkovate&lcaron;</h2>
+        <p>Rambala Stol&aacute;rstvo<br>Zubrohlava, 029 43, Slovensk&aacute; republika<br>E-mail: rambalastolarstvo@gmail.com<br>Telef&oacute;n: +421 907 854 368</p>
+
+        <h2>2. Ak&eacute; &uacute;daje zbierame</h2>
+        <ul>
+            <li><strong>Kontaktn&yacute; formul&aacute;r:</strong> meno, e-mail, telef&oacute;nne &ccaron;&iacute;slo, spr&aacute;va</li>
+            <li><strong>Cookies:</strong> funkcion&aacute;lne (jazyk, s&uacute;hlas), analytick&eacute; (len so s&uacute;hlasom)</li>
+            <li><strong>Automaticky:</strong> IP adresa, typ prehliada&ccaron;a (serverov&eacute; logy)</li>
+        </ul>
+
+        <h2>3. Pr&aacute;vny z&aacute;klad spracovania</h2>
+        <ul>
+            <li><strong>&Ccaron;l. 6 ods. 1 p&iacute;sm. a) GDPR:</strong> S&uacute;hlas (kontaktn&yacute; formul&aacute;r, analytick&eacute; cookies)</li>
+            <li><strong>&Ccaron;l. 6 ods. 1 p&iacute;sm. b) GDPR:</strong> Plnenie zmluvy (spracovanie dopytu)</li>
+            <li><strong>&Ccaron;l. 6 ods. 1 p&iacute;sm. f) GDPR:</strong> Opr&aacute;vnen&yacute; z&aacute;ujem (bezpe&ccaron;nos&tcaron; webu)</li>
+        </ul>
+
+        <h2>4. Doba uchov&aacute;vania</h2>
+        <p>Kontaktn&eacute; &uacute;daje uchov&aacute;vame po dobu 3 rokov od posledn&eacute;ho kontaktu. Cookies sa riadia vlastnou dobou platnosti (vi&dstrok; Cookie politika).</p>
+
+        <h2>5. Pr&iacute;jemcovia &uacute;dajov</h2>
+        <p>Va&scaron;e &uacute;daje nepredan&eacute; tret&iacute;m stran&aacute;m s v&yacute;nimkou pr&iacute;padov vy&zcaron;adovan&yacute;ch z&aacute;konom. Hosting str&aacute;nky zabezpe&ccaron;uje GitHub Pages.</p>
+
+        <h2>6. Va&scaron;e pr&aacute;va</h2>
+        <p>Pod&lcaron;a GDPR a z&aacute;kona &ccaron;. 18/2018 Z.z. m&aacute;te pr&aacute;vo na:</p>
+        <ul>
+            <li>Pr&iacute;stup k va&scaron;im &uacute;dajom (&ccaron;l. 15 GDPR)</li>
+            <li>Opravu nepresn&yacute;ch &uacute;dajov (&ccaron;l. 16 GDPR)</li>
+            <li>Vymazanie &uacute;dajov (&ccaron;l. 17 GDPR)</li>
+            <li>Obmedzenie spracovania (&ccaron;l. 18 GDPR)</li>
+            <li>Prenos &uacute;dajov (&ccaron;l. 20 GDPR)</li>
+            <li>Namietanie proti spracovaniu (&ccaron;l. 21 GDPR)</li>
+            <li>Odvolanie s&uacute;hlasu kedyko&lcaron;vek</li>
+            <li>Podanie s&tcaron;a&zcaron;nosti na &Uacute;rad na ochranu osobn&yacute;ch &uacute;dajov SR</li>
+        </ul>
+
+        <h2>7. Bezpe&ccaron;nos&tcaron;</h2>
+        <p>Prijali sme primerané technick&eacute; a organiza&ccaron;n&eacute; opatrenia na ochranu va&scaron;ich &uacute;dajov vr&aacute;tane &scaron;ifrovania prenosu (HTTPS).</p>
+
+        <p class="updated">Posledn&aacute; aktualiz&aacute;cia: 1. janu&aacute;r 2026</p>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="lang-content" id="lang-en">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Personal data protection in accordance with GDPR (EU 2016/679).</p>
+
+        <h2>1. Data Controller</h2>
+        <p>Rambala Stol&aacute;rstvo<br>Zubrohlava, 029 43, Slovak Republic<br>Email: rambalastolarstvo@gmail.com<br>Phone: +421 907 854 368</p>
+
+        <h2>2. Data We Collect</h2>
+        <ul>
+            <li><strong>Contact form:</strong> name, email, phone number, message</li>
+            <li><strong>Cookies:</strong> functional (language, consent), analytics (with consent only)</li>
+            <li><strong>Automatic:</strong> IP address, browser type (server logs)</li>
+        </ul>
+
+        <h2>3. Legal Basis</h2>
+        <ul>
+            <li><strong>Art. 6(1)(a) GDPR:</strong> Consent (contact form, analytics cookies)</li>
+            <li><strong>Art. 6(1)(b) GDPR:</strong> Contract performance (inquiry processing)</li>
+            <li><strong>Art. 6(1)(f) GDPR:</strong> Legitimate interest (website security)</li>
+        </ul>
+
+        <h2>4. Retention Period</h2>
+        <p>Contact data is retained for 3 years from last contact. Cookies follow their own expiry (see Cookie Policy).</p>
+
+        <h2>5. Data Recipients</h2>
+        <p>Your data is not shared with third parties except as required by law. Website hosting is provided by GitHub Pages.</p>
+
+        <h2>6. Your Rights</h2>
+        <p>Under GDPR, you have the right to:</p>
+        <ul>
+            <li>Access your data (Art. 15 GDPR)</li>
+            <li>Rectification of inaccurate data (Art. 16 GDPR)</li>
+            <li>Erasure of data (Art. 17 GDPR)</li>
+            <li>Restriction of processing (Art. 18 GDPR)</li>
+            <li>Data portability (Art. 20 GDPR)</li>
+            <li>Object to processing (Art. 21 GDPR)</li>
+            <li>Withdraw consent at any time</li>
+            <li>Lodge a complaint with the Slovak Data Protection Authority</li>
+        </ul>
+
+        <h2>7. Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your data, including encrypted transmission (HTTPS).</p>
+
+        <p class="updated">Last updated: January 1, 2026</p>
+    </div>
+
+    <!-- GERMAN -->
+    <div class="lang-content" id="lang-de">
+        <h1>Datenschutzerkl&auml;rung</h1>
+        <p class="subtitle">Schutz personenbezogener Daten gem&auml;&szlig; DSGVO (EU 2016/679).</p>
+
+        <h2>1. Verantwortlicher</h2>
+        <p>Rambala Stol&aacute;rstvo<br>Zubrohlava, 029 43, Slowakische Republik<br>E-Mail: rambalastolarstvo@gmail.com<br>Telefon: +421 907 854 368</p>
+
+        <h2>2. Erhobene Daten</h2>
+        <ul>
+            <li><strong>Kontaktformular:</strong> Name, E-Mail, Telefonnummer, Nachricht</li>
+            <li><strong>Cookies:</strong> Funktional (Sprache, Einwilligung), Analytisch (nur mit Einwilligung)</li>
+            <li><strong>Automatisch:</strong> IP-Adresse, Browsertyp (Server-Logs)</li>
+        </ul>
+
+        <h2>3. Rechtsgrundlage</h2>
+        <ul>
+            <li><strong>Art. 6 Abs. 1 lit. a DSGVO:</strong> Einwilligung (Kontaktformular, Analytics)</li>
+            <li><strong>Art. 6 Abs. 1 lit. b DSGVO:</strong> Vertragserf&uuml;llung (Anfragenbearbeitung)</li>
+            <li><strong>Art. 6 Abs. 1 lit. f DSGVO:</strong> Berechtigtes Interesse (Website-Sicherheit)</li>
+        </ul>
+
+        <h2>4. Speicherdauer</h2>
+        <p>Kontaktdaten werden 3 Jahre ab dem letzten Kontakt gespeichert. Cookies unterliegen ihrer eigenen Laufzeit (siehe Cookie-Richtlinie).</p>
+
+        <h2>5. Datenempf&auml;nger</h2>
+        <p>Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben. Das Website-Hosting erfolgt &uuml;ber GitHub Pages.</p>
+
+        <h2>6. Ihre Rechte</h2>
+        <p>Gem&auml;&szlig; DSGVO haben Sie das Recht auf:</p>
+        <ul>
+            <li>Auskunft (Art. 15 DSGVO)</li>
+            <li>Berichtigung (Art. 16 DSGVO)</li>
+            <li>L&ouml;schung (Art. 17 DSGVO)</li>
+            <li>Einschr&auml;nkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Daten&uuml;bertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Widerspruch (Art. 21 DSGVO)</li>
+            <li>Widerruf der Einwilligung jederzeit</li>
+            <li>Beschwerde bei der slowakischen Datenschutzbeh&ouml;rde</li>
+        </ul>
+
+        <h2>7. Sicherheit</h2>
+        <p>Wir setzen geeignete technische und organisatorische Ma&szlig;nahmen zum Schutz Ihrer Daten ein, einschlie&szlig;lich verschl&uuml;sselter &Uuml;bertragung (HTTPS).</p>
+
+        <p class="updated">Letzte Aktualisierung: 1. Januar 2026</p>
+    </div>
+
+    <!-- POLISH -->
+    <div class="lang-content" id="lang-pl">
+        <h1>Polityka prywatno&sacute;ci</h1>
+        <p class="subtitle">Ochrona danych osobowych zgodnie z RODO (UE 2016/679).</p>
+
+        <h2>1. Administrator danych</h2>
+        <p>Rambala Stol&aacute;rstvo<br>Zubrohlava, 029 43, Republika S&lstrok;owacka<br>E-mail: rambalastolarstvo@gmail.com<br>Telefon: +421 907 854 368</p>
+
+        <h2>2. Zbierane dane</h2>
+        <ul>
+            <li><strong>Formularz kontaktowy:</strong> imi&eogon;, e-mail, numer telefonu, wiadomo&sacute;&cacute;</li>
+            <li><strong>Cookies:</strong> funkcjonalne (j&eogon;zyk, zgoda), analityczne (tylko za zgod&aogon;)</li>
+            <li><strong>Automatycznie:</strong> adres IP, typ przegl&aogon;darki (logi serwera)</li>
+        </ul>
+
+        <h2>3. Podstawa prawna</h2>
+        <ul>
+            <li><strong>Art. 6 ust. 1 lit. a RODO:</strong> Zgoda (formularz, cookies analityczne)</li>
+            <li><strong>Art. 6 ust. 1 lit. b RODO:</strong> Wykonanie umowy (obs&lstrok;uga zapyta&nacute;)</li>
+            <li><strong>Art. 6 ust. 1 lit. f RODO:</strong> Prawnie uzasadniony interes (bezpiecze&nacute;stwo)</li>
+        </ul>
+
+        <h2>4. Okres przechowywania</h2>
+        <p>Dane kontaktowe przechowujemy przez 3 lata od ostatniego kontaktu. Cookies podlegaj&aogon; w&lstrok;asnym okresom wa&zcaron;no&sacute;ci (patrz Polityka cookies).</p>
+
+        <h2>5. Odbiorcy danych</h2>
+        <p>Twoje dane nie s&aogon; udost&eogon;pniane osobom trzecim, chyba &zcaron;e wymaga tego prawo. Hosting zapewnia GitHub Pages.</p>
+
+        <h2>6. Twoje prawa</h2>
+        <p>Zgodnie z RODO masz prawo do:</p>
+        <ul>
+            <li>Dost&eogon;pu do danych (art. 15 RODO)</li>
+            <li>Sprostowania danych (art. 16 RODO)</li>
+            <li>Usuni&eogon;cia danych (art. 17 RODO)</li>
+            <li>Ograniczenia przetwarzania (art. 18 RODO)</li>
+            <li>Przenoszenia danych (art. 20 RODO)</li>
+            <li>Sprzeciwu (art. 21 RODO)</li>
+            <li>Wycofania zgody w dowolnym momencie</li>
+            <li>Z&lstrok;o&zcaron;enia skargi do organu nadzorczego</li>
+        </ul>
+
+        <h2>7. Bezpiecze&nacute;stwo</h2>
+        <p>Stosujemy odpowiednie &sacute;rodki techniczne i organizacyjne w celu ochrony danych, w tym szyfrowanie transmisji (HTTPS).</p>
+
+        <p class="updated">Ostatnia aktualizacja: 1 stycznia 2026</p>
+    </div>
+</div>
+<script>
+function showLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelector('.lang-tab[onclick*="' + lang + '"]').classList.add('active');
+}
+</script>
+</body>
+</html>

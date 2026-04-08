@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | Rambala Stolárstvo</title>
+    <meta name="description" content="Legal notice (Impressum) for Rambala Stolárstvo – company identification, contact, and regulatory information.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Impressum page-specific styles */
+        .impressum-page {
+            background: var(--color-bg, #FAF7F2);
+            min-height: 100vh;
+            font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
+            color: var(--color-text, #1A1A1A);
+        }
+
+        .impressum-header {
+            background: var(--color-primary, #2C1810);
+            padding: var(--space-lg, 2.5rem) var(--space-md, 1.5rem);
+            text-align: center;
+        }
+
+        .impressum-header a {
+            color: var(--color-secondary, #D4A574);
+            text-decoration: none;
+            font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s ease;
+        }
+
+        .impressum-header a:hover {
+            opacity: 0.8;
+        }
+
+        .impressum-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-xl, 4rem) var(--space-md, 1.5rem) var(--space-2xl, 6rem);
+        }
+
+        .impressum-title {
+            font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            color: var(--color-primary, #2C1810);
+            margin-bottom: var(--space-xs, 0.5rem);
+        }
+
+        .impressum-subtitle {
+            font-size: 1rem;
+            color: var(--color-text-muted, #6B6560);
+            margin-bottom: var(--space-lg, 2.5rem);
+        }
+
+        /* Language switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: var(--space-xl, 4rem);
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1.25rem;
+            border: 1.5px solid var(--color-border, #E5DDD5);
+            border-radius: var(--radius-sm, 6px);
+            background: var(--color-surface, #FFFFFF);
+            color: var(--color-text-muted, #6B6560);
+            font-family: var(--font-body, 'Inter', sans-serif);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--color-accent, #8B6F47);
+            color: var(--color-primary, #2C1810);
+        }
+
+        .lang-btn.active {
+            background: var(--color-primary, #2C1810);
+            color: var(--color-surface, #FFFFFF);
+            border-color: var(--color-primary, #2C1810);
+        }
+
+        /* Content sections */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .impressum-section {
+            margin-bottom: var(--space-lg, 2.5rem);
+            padding-bottom: var(--space-lg, 2.5rem);
+            border-bottom: 1px solid var(--color-border, #E5DDD5);
+        }
+
+        .impressum-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .impressum-section h2 {
+            font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--color-primary, #2C1810);
+            margin-bottom: var(--space-sm, 1rem);
+        }
+
+        .impressum-section p,
+        .impressum-section li {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--color-text, #1A1A1A);
+        }
+
+        .impressum-section p + p {
+            margin-top: 0.75rem;
+        }
+
+        .impressum-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .impressum-section ul li {
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .impressum-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.65em;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--color-secondary, #D4A574);
+        }
+
+        .impressum-section a {
+            color: var(--color-accent, #8B6F47);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease;
+        }
+
+        .impressum-section a:hover {
+            color: var(--color-primary, #2C1810);
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .contact-label {
+            font-weight: 500;
+            min-width: 5rem;
+            color: var(--color-text-muted, #6B6560);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: var(--space-lg, 2.5rem);
+            padding: 0.75rem 1.5rem;
+            background: var(--color-primary, #2C1810);
+            color: var(--color-surface, #FFFFFF);
+            border-radius: var(--radius-sm, 6px);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.85;
+        }
+
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Footer */
+        .impressum-footer {
+            text-align: center;
+            padding: var(--space-md, 1.5rem);
+            font-size: 0.8rem;
+            color: var(--color-text-muted, #6B6560);
+            border-top: 1px solid var(--color-border, #E5DDD5);
+        }
+    </style>
+</head>
+<body class="impressum-page">
+
+    <!-- Header -->
+    <header class="impressum-header">
+        <a href="../index.html">Rambala Stolárstvo</a>
+    </header>
+
+    <!-- Main content -->
+    <main class="impressum-container">
+        <h1 class="impressum-title">Impressum</h1>
+        <p class="impressum-subtitle">Legal Notice / Právne informácie / Impressum / Informacje prawne</p>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher" role="tablist" aria-label="Language selection">
+            <button class="lang-btn active" role="tab" aria-selected="true" aria-controls="content-sk" data-lang="sk">Slovensky</button>
+            <button class="lang-btn" role="tab" aria-selected="false" aria-controls="content-en" data-lang="en">English</button>
+            <button class="lang-btn" role="tab" aria-selected="false" aria-controls="content-de" data-lang="de">Deutsch</button>
+            <button class="lang-btn" role="tab" aria-selected="false" aria-controls="content-pl" data-lang="pl">Polski</button>
+        </div>
+
+        <!-- ==================== SLOVAK ==================== -->
+        <div id="content-sk" class="lang-content active" role="tabpanel" lang="sk">
+
+            <section class="impressum-section">
+                <h2>Identifikácia prevádzkovateľa</h2>
+                <p><strong>Rambala Stolárstvo</strong></p>
+                <p>Zubrohlava<br>029 43<br>Slovenská republika</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Kontaktné údaje</h2>
+                <div class="contact-detail">
+                    <span class="contact-label">E-mail</span>
+                    <span><a href="mailto:rambalastolarstvo@gmail.com">rambalastolarstvo@gmail.com</a></span>
+                </div>
+                <div class="contact-detail">
+                    <span class="contact-label">Telefón</span>
+                    <span><a href="tel:+421907854368">+421 907 854 368</a></span>
+                </div>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Zodpovedná osoba</h2>
+                <p>Za obsah webovej stránky zodpovedá prevádzkovateľ: Rambala Stolárstvo, Zubrohlava, Slovenská republika.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Regulačné informácie</h2>
+                <p>Táto webová stránka je prevádzkovaná v súlade so Smernicou Európskeho parlamentu a Rady 2000/31/ES o elektronickom obchode a príslušnými ustanoveniami nemeckého zákona o telemediálnych službách (Telemediengesetz, TMG).</p>
+                <p>Podnikateľská činnosť sa riadi právnym poriadkom Slovenskej republiky. Dozorným orgánom je príslušný okresný úrad, odbor živnostenského podnikania.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Odmietnutie zodpovednosti</h2>
+                <p>Obsah tejto webovej stránky bol zostavený s najväčšou starostlivosťou. Prevádzkovateľ však nepreberá žiadnu záruku za správnosť, úplnosť a aktuálnosť poskytovaných informácií. Použitie obsahu tejto webovej stránky je na vlastné riziko používateľa.</p>
+                <p>Prevádzkovateľ si vyhradzuje právo kedykoľvek zmeniť, doplniť alebo odstrániť obsah stránky bez predchádzajúceho upozornenia.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Zodpovednosť za odkazy</h2>
+                <p>Táto webová stránka môže obsahovať odkazy na externé webové stránky tretích strán. Za obsah týchto externých stránok zodpovedajú výlučne ich prevádzkovatelia. V čase zverejnenia odkazov nebol zistený žiadny protiprávny obsah. Priebežná kontrola obsahu externých odkazov bez konkrétneho podozrenia na porušenie zákona nie je primeraná. V prípade zistenia porušenia zákona budú takéto odkazy bezodkladne odstránené.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Autorské práva</h2>
+                <p>Obsah a diela na tejto webovej stránke podliehajú autorskému právu. Akékoľvek rozmnožovanie, spracovanie, šírenie alebo akékoľvek iné využitie presahujúce rámec autorského práva vyžaduje predchádzajúci písomný súhlas prevádzkovateľa.</p>
+                <p>&copy; <span class="copyright-year">2025</span> Rambala Stolárstvo. Všetky práva vyhradené.</p>
+            </section>
+        </div>
+
+        <!-- ==================== ENGLISH ==================== -->
+        <div id="content-en" class="lang-content" role="tabpanel" lang="en">
+
+            <section class="impressum-section">
+                <h2>Company Identification</h2>
+                <p><strong>Rambala Stolárstvo</strong></p>
+                <p>Zubrohlava<br>029 43<br>Slovak Republic</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Contact Information</h2>
+                <div class="contact-detail">
+                    <span class="contact-label">Email</span>
+                    <span><a href="mailto:rambalastolarstvo@gmail.com">rambalastolarstvo@gmail.com</a></span>
+                </div>
+                <div class="contact-detail">
+                    <span class="contact-label">Phone</span>
+                    <span><a href="tel:+421907854368">+421 907 854 368</a></span>
+                </div>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Responsible Person</h2>
+                <p>The operator responsible for the content of this website: Rambala Stolárstvo, Zubrohlava, Slovak Republic.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Regulatory Information</h2>
+                <p>This website is operated in accordance with the European Directive 2000/31/EC on electronic commerce (e-Commerce Directive) and the relevant provisions of the German Telemedia Act (Telemediengesetz, TMG).</p>
+                <p>Business activities are governed by the laws of the Slovak Republic. The supervisory authority is the competent district office, trade licensing department.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Disclaimer</h2>
+                <p>The content of this website has been compiled with the utmost care. However, the operator assumes no liability for the accuracy, completeness, or timeliness of the information provided. Use of the content of this website is at the user's own risk.</p>
+                <p>The operator reserves the right to modify, supplement, or remove content from this website at any time without prior notice.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Liability for Links</h2>
+                <p>This website may contain links to external third-party websites. The content of these external websites is the sole responsibility of their respective operators. At the time of linking, no illegal content was identified. Continuous monitoring of linked external content without specific indication of a legal violation is unreasonable. If any infringement becomes known, such links will be removed immediately.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Copyright Notice</h2>
+                <p>The content and works on this website are subject to copyright law. Any reproduction, processing, distribution, or any other use beyond the scope of copyright law requires prior written consent of the operator.</p>
+                <p>&copy; <span class="copyright-year">2025</span> Rambala Stolárstvo. All rights reserved.</p>
+            </section>
+        </div>
+
+        <!-- ==================== GERMAN ==================== -->
+        <div id="content-de" class="lang-content" role="tabpanel" lang="de">
+
+            <section class="impressum-section">
+                <h2>Angaben gemäß § 5 TMG</h2>
+                <p><strong>Rambala Stolárstvo</strong></p>
+                <p>Zubrohlava<br>029 43<br>Slowakische Republik</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Kontakt</h2>
+                <div class="contact-detail">
+                    <span class="contact-label">E-Mail</span>
+                    <span><a href="mailto:rambalastolarstvo@gmail.com">rambalastolarstvo@gmail.com</a></span>
+                </div>
+                <div class="contact-detail">
+                    <span class="contact-label">Telefon</span>
+                    <span><a href="tel:+421907854368">+421 907 854 368</a></span>
+                </div>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Verantwortlich für den Inhalt</h2>
+                <p>Verantwortlich für den Inhalt dieser Webseite: Rambala Stolárstvo, Zubrohlava, Slowakische Republik.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Aufsichtsbehörde / Regulierung</h2>
+                <p>Diese Webseite wird in Übereinstimmung mit der Richtlinie 2000/31/EG des Europäischen Parlaments und des Rates über den elektronischen Geschäftsverkehr (E-Commerce-Richtlinie) sowie den einschlägigen Bestimmungen des Telemediengesetzes (TMG) betrieben.</p>
+                <p>Die Geschäftstätigkeit unterliegt dem Recht der Slowakischen Republik. Zuständige Aufsichtsbehörde ist das zuständige Bezirksamt, Abteilung für Gewerbeordnung.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Haftungsausschluss</h2>
+                <p>Die Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Der Betreiber übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen. Die Nutzung der Inhalte dieser Webseite erfolgt auf eigene Gefahr des Nutzers.</p>
+                <p>Der Betreiber behält sich das Recht vor, Inhalte dieser Webseite jederzeit ohne vorherige Ankündigung zu ändern, zu ergänzen oder zu entfernen.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Haftung für Links</h2>
+                <p>Diese Webseite kann Links zu externen Webseiten Dritter enthalten. Für die Inhalte dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung wurden keine rechtswidrigen Inhalte festgestellt. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Urheberrecht</h2>
+                <p>Die Inhalte und Werke auf dieser Webseite unterliegen dem Urheberrecht. Jede Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung des Betreibers.</p>
+                <p>&copy; <span class="copyright-year">2025</span> Rambala Stolárstvo. Alle Rechte vorbehalten.</p>
+            </section>
+        </div>
+
+        <!-- ==================== POLISH ==================== -->
+        <div id="content-pl" class="lang-content" role="tabpanel" lang="pl">
+
+            <section class="impressum-section">
+                <h2>Identyfikacja podmiotu</h2>
+                <p><strong>Rambala Stolárstvo</strong></p>
+                <p>Zubrohlava<br>029 43<br>Republika Słowacka</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Dane kontaktowe</h2>
+                <div class="contact-detail">
+                    <span class="contact-label">E-mail</span>
+                    <span><a href="mailto:rambalastolarstvo@gmail.com">rambalastolarstvo@gmail.com</a></span>
+                </div>
+                <div class="contact-detail">
+                    <span class="contact-label">Telefon</span>
+                    <span><a href="tel:+421907854368">+421 907 854 368</a></span>
+                </div>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Osoba odpowiedzialna</h2>
+                <p>Za treść niniejszej strony internetowej odpowiada: Rambala Stolárstvo, Zubrohlava, Republika Słowacka.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Informacje regulacyjne</h2>
+                <p>Niniejsza strona internetowa jest prowadzona zgodnie z Dyrektywą 2000/31/WE Parlamentu Europejskiego i Rady w sprawie handlu elektronicznego oraz odpowiednimi przepisami niemieckiej ustawy o telemediach (Telemediengesetz, TMG).</p>
+                <p>Działalność gospodarcza podlega prawu Republiki Słowackiej. Organem nadzorczym jest właściwy urząd okręgowy, wydział działalności gospodarczej.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Wyłączenie odpowiedzialności</h2>
+                <p>Treść niniejszej strony internetowej została opracowana z najwyższą starannością. Operator nie ponosi jednak odpowiedzialności za prawidłowość, kompletność i aktualność udostępnianych informacji. Korzystanie z treści niniejszej strony internetowej odbywa się na własne ryzyko użytkownika.</p>
+                <p>Operator zastrzega sobie prawo do zmiany, uzupełnienia lub usunięcia treści strony w dowolnym momencie bez uprzedniego powiadomienia.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Odpowiedzialność za linki</h2>
+                <p>Niniejsza strona internetowa może zawierać odnośniki do zewnętrznych stron internetowych osób trzecich. Za treść tych stron zewnętrznych odpowiadają wyłącznie ich operatorzy. W momencie umieszczenia linków nie stwierdzono żadnych treści niezgodnych z prawem. Stałe monitorowanie treści stron zewnętrznych bez konkretnych przesłanek naruszenia prawa jest nieuzasadnione. W przypadku stwierdzenia naruszenia prawa takie linki zostaną niezwłocznie usunięte.</p>
+            </section>
+
+            <section class="impressum-section">
+                <h2>Prawa autorskie</h2>
+                <p>Treści i dzieła na niniejszej stronie internetowej podlegają ochronie prawa autorskiego. Jakiekolwiek powielanie, przetwarzanie, rozpowszechnianie lub inne wykorzystanie wykraczające poza zakres prawa autorskiego wymaga uprzedniej pisemnej zgody operatora.</p>
+                <p>&copy; <span class="copyright-year">2025</span> Rambala Stolárstvo. Wszelkie prawa zastrzeżone.</p>
+            </section>
+        </div>
+
+        <!-- Back to home -->
+        <a href="../index.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span class="back-text">Späť na hlavnú stránku</span>
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="impressum-footer">
+        <p>&copy; <span class="copyright-year">2025</span> Rambala Stolárstvo, Zubrohlava, Slovakia</p>
+    </footer>
+
+    <!-- Language Switcher JS -->
+    <script>
+        (function() {
+            const buttons = document.querySelectorAll('.lang-btn');
+            const contents = document.querySelectorAll('.lang-content');
+            const backText = document.querySelector('.back-text');
+
+            const backLabels = {
+                sk: 'Späť na hlavnú stránku',
+                en: 'Back to homepage',
+                de: 'Zurück zur Startseite',
+                pl: 'Powrót do strony głównej'
+            };
+
+            buttons.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var lang = this.getAttribute('data-lang');
+
+                    // Update buttons
+                    buttons.forEach(function(b) {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+
+                    // Update content panels
+                    contents.forEach(function(c) {
+                        c.classList.remove('active');
+                    });
+                    document.getElementById('content-' + lang).classList.add('active');
+
+                    // Update back link text
+                    if (backText && backLabels[lang]) {
+                        backText.textContent = backLabels[lang];
+                    }
+
+                    // Update html lang attribute
+                    document.documentElement.setAttribute('lang', lang);
+                });
+            });
+
+            // Update copyright year dynamically
+            var year = new Date().getFullYear();
+            document.querySelectorAll('.copyright-year').forEach(function(el) {
+                el.textContent = year;
+            });
+        })();
+    </script>
+</body>
+</html>
