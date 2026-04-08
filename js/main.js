@@ -522,6 +522,16 @@
         if (preloader) {
             setTimeout(function () {
                 preloader.classList.add('hidden');
+                /* Trigger logo entrance — same timing as anim-fade-up images */
+                setTimeout(function () {
+                    document.querySelectorAll('.logo-anim').forEach(function (el) {
+                        el.classList.add('visible');
+                    });
+                    /* Also reveal hero photo if present */
+                    document.querySelectorAll('.hero-photo-reveal').forEach(function (el) {
+                        el.classList.add('visible');
+                    });
+                }, 100);
             }, 1200);
         }
         setLanguage(currentLang);

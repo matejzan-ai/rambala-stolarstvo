@@ -1243,6 +1243,31 @@ h1, h2, h3, h4 {
     transform: translate(0);
 }
 
+/* ---------- Logo Entrance Animation ---------- */
+/* Same easing and distance as anim-fade-up so logo + images are consistent */
+.logo-anim {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo-anim.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero photo reveal — slides up just like images in other sections */
+.hero-photo-reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+                transform 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+.hero-photo-reveal.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
